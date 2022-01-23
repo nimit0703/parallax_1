@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars" alt="">
+        <img src="moon.png" id="moon" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_behind.png" id="mountains_behind" alt="">
+        <img src="mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax effect</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit obcaecati fugit in a! Soluta eius minus ea dicta deserunt, quidem aspernatur amet, qui omnis officiis natus cumque laboriosam Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel doloribus exercitationem, sequi laudantium voluptatibus distinctio vero consequuntur ipsa, eos harum, aliquam sit ratione rerum assumenda dolorum necessitatibus aperiam ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta illo similique ducimus quos facere fugit inventore, modi adipisci, delectus dolores voluptates aut animi nesciunt culpa sequi id magnam? Consequatur!br
+            <br>
+            <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quisquam recusandae, nam nihil eligendi nemo, est sunt fugit at molestias natus temporibus voluptates pariatur, modi officia beatae tenetur dolorem optio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident fugiat explicabo itaque necessitatibus accusantium blanditiis harum doloribus nulla non quaerat sed hic, laborum mollitia enim nobis facere repudiandae qui voluptatum.
+            <br>
+            <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quisquam recusandae, nam nihil eligendi nemo, est sunt fugit at molestias natus temporibus voluptates pariatur, modi officia beatae tenetur dolorem optio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident fugiat explicabo itaque necessitatibus accusantium blanditiis harum doloribus nulla non quaerat sed hic, laborum mollitia enim nobis facere repudiandae qui voluptatum.
+            <br><br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, voluptatibus magni. Repellendus porro sit, cupiditate sint ut et aliquid nisi quidem numquam ad doloribus itaque! Veniam odio dolores voluptatibus corrupti.
+            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repudiandae, distinctio libero, similique tempore amet assumenda, nisi aut ad odit voluptatibus corporis reiciendis mollitia labore animi nostrum incidunt. Repellat, veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo consequatur reiciendis amet. Perferendis saepe nisi quasi doloremque error eveniet natus voluptas harum, aliquam in fugiat nam molestias blanditiis expedita suscipit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod quaerat molestiae, atque cumque quisquam, voluptate doloremque magni pariatur ipsum dolor placeat architecto cum iste aliquam consectetur, ad dicta. Voluptatum!br <br> <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, voluptate itaque. Nostrum, natus similique corrupti asperiores quasi nesciunt laudantium, aspernatur numquam, quod quidem repellendus quae! Est iste obcaecati molestiae vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum reiciendis delectus quia, suscipit similique minima? Error nobis aliquid rerum natus obcaecati nam veritatis mollitia a, quia blanditiis dicta eaque quo. <br><br>
+        </p>
+    </div>
+
+
+    <script>
+        let stars= document.getElementById('stars')
+        let moon= document.getElementById('moon')
+        let mountains_behind= document.getElementById('mountains_behind')
+        let text = document.getElementById("text")
+        let btn = document.getElementById("btn")
+        let mountains_front= document.getElementById('mountains_front')
+        let header =document.querySelector('header');
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left =value*0.25 + 'px';
+            moon.style.top =value*1.05 + 'px';
+            mountains_behind.style.top =value*0.5 + 'px';
+            mountains_front.style.top =value*0 + 'px';
+            text.style.marginRight =value*4 + 'px';
+            text.style.marginTop =value*1.5 + 'px';
+            btn.style.marginTop =value*1.5 + 'px';
+            header.style.top=value*0.5 +'px'
+        })
+    </script>
+
+
+</body>
+</html>
