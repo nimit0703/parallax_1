@@ -1,2 +1,3 @@
-﻿# parallax_1
- https://nimit0703.github.io/parallax_1/
+
+ # To Visit the Parallax_1
+ [ click here](https://nimit0703.github.io/parallax_1/)
